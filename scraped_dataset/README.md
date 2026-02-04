@@ -113,3 +113,20 @@ Dataset contains ~229 coffee entries
 - The scraper requires valid CQI login credentials (username and password created on the CQI database).
 - This folder focuses exclusively on data scraping and intermediate outputs.  
   Data cleaning, analysis, and modeling are handled in the main project directory.
+
+## Acknowledgements
+
+This project builds upon and was inspired by the following open-source repositories:
+
+
+- **coffee-quality-database** by James LeDoux  
+  https://github.com/jldbc/coffee-quality-database
+  
+- **coffee-quality-data-CQI** by Fatih Boyar  
+  https://github.com/fatih-boyar/coffee-quality-data-CQI
+
+
+These repositories provided the initial scraper logic and dataset processing concepts that were adapted and updated for the current CQI website structure.
+
+Special thanks to the authors for openly sharing their work.
+
