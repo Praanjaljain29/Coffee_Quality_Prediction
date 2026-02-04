@@ -75,6 +75,7 @@ Each output CSV is named like:
 
 ## 📦 Organizing Raw Data
 After scraping finishes, run:
+
 ```bash
 python scraper/moving_csv.py
 ```
@@ -90,8 +91,9 @@ scraped_dataset/scraper/raw_data/
 
 ## 🧠 Merging Into a Combined Dataset
 Run the table-processing script:
-
+```bash
 python scraper/process_tables_f.py
+```
 This will:
 
    Read all raw coffee CSV tables from raw_data/
