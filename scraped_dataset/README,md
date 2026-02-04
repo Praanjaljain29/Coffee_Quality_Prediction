@@ -1,0 +1,62 @@
+# 🕸️ Coffee Quality Data Scraping
+
+This folder contains all scripts and resources used to scrape coffee quality data from the Coffee Quality Institute (CQI) website.
+
+The scraping workflow is isolated from the rest of the project using a dedicated virtual environment.
+
+---
+
+## 📂 Folder Structure
+
+scraped_dataset/
+├── .venv/ # Virtual environment for scraping
+├── requirements.txt # Scraper dependencies
+├── scraper/
+│ ├── scraper_bot.py # Main Selenium scraper
+│ ├── moving_csv.py # Moves generated CSV files to raw_data/
+│ ├── process_tables_f.py # Combines tables into one dataset
+│ ├── raw_data/ # Raw scraped CSV files
+│ └── df_1_arabica.csv # Combined dataset (un-cleaned)
+
+
+---
+
+## 🔐 Authentication
+
+The CQI website requires user authentication to access coffee quality data.
+
+The scraper:
+1. Opens the CQI login page
+2. Submits user credentials
+3. Navigates to the Arabica coffees listing
+
+> Credentials are **not committed** to this repository.
+
+---
+
+## 🛠️ Environment Setup
+
+```bash
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+
+🧪 Scraping Process
+The scraper navigates to the Arabica coffees section
+Iterates through all available pages (5 pages total)
+Opens each coffee detail page
+Extracts all HTML tables
+Saves tables as individual CSV files
+Each coffee generates multiple CSV files named: coffee_<coffee_id>_table_<table_id>.csv 
+
+📦 Raw Data Organization
+After scraping, moving_csv.py:
+Creates a raw_data/ folder
+Moves all generated CSV files into it
+
+🔗 Table Processing
+process_tables_f.py:
+Reads tables from raw_data/
+Merges tables belonging to the same coffee
+Skips incomplete entries
+Outputs: df_1_arabica.csv
