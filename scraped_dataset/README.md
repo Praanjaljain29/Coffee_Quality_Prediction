@@ -120,10 +120,9 @@ Matches the number of records visible manually on the site
 
 Larger datasets found online (1300+) are historical exports, not current site data.
 
-## ❗Important Notes
+## ⚠ Important Notes
 
-Login credentials are required only for scraping and should be stored securely (e.g., environment variables).
-
-Avoid committing .venv and credentials to version control.
-
-This folder only contains scraping logic & results — see the main project folder for modeling and analysis.
+- Authentication is required to access detailed coffee reports on the CQI website.
+- The scraper requires valid CQI login credentials (username and password created on the CQI database).
+- This folder focuses exclusively on data scraping and intermediate outputs.  
+  Data cleaning, analysis, and modeling are handled in the main project directory.
