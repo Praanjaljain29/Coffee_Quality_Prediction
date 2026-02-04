@@ -58,7 +58,7 @@ Saves them as CSV files (one file per table, per coffee)
 Each output CSV is named like:
 
 coffee_<id>_table_<index>.csv
-📦 Organizing Raw Data
+## 📦 Organizing Raw Data
 After scraping finishes, run:
 
 python scraper/moving_csv.py
@@ -71,7 +71,7 @@ Move all CSV files starting with coffee_ into it
 Now your directory looks like:
 
 scraped_dataset/scraper/raw_data/
-🧠 Merging Into a Combined Dataset
+## 🧠 Merging Into a Combined Dataset
 Run the table-processing script:
 
 python scraper/process_tables_f.py
@@ -88,7 +88,7 @@ Resulting file:
 scraped_dataset/scraper/df_1_arabica.csv
 This is a combined dataset ready for cleaning and analysis.
 
-📊 Current Dataset Summary
+## 📊 Current Dataset Summary
 Dataset contains ~229 coffee entries
 
 Each entry has ~40 features
@@ -99,7 +99,7 @@ Matches the number of records visible manually on the site
 
 Larger datasets found online (1300+) are historical exports, not current site data.
 
-❗ Important Notes
+##❗ Important Notes
 Login credentials are required only for scraping and should be stored securely (e.g., environment variables).
 
 Avoid committing .venv and credentials to version control.
