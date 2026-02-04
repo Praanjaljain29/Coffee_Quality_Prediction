@@ -58,17 +58,12 @@ python scraper/scraper_bot.py
 
 What this does:
 
-Logs into the CQI website
-
-Navigates to the Arabica Coffees section
-
-Iterates through available pages
-
-Opens each coffee detail page
-
-Extracts all HTML tables
-
-Saves them as CSV files (one file per table, per coffee)
+- Logs into the CQI website
+- Navigates to the Arabica Coffees section
+- Iterates through available pages
+- Opens each coffee detail page
+- Extracts all HTML tables
+- Saves them as CSV files (one file per table, per coffee)
 
 Each output CSV is named like:
    coffee_<id>_table_<index>.csv
@@ -80,14 +75,12 @@ After scraping finishes, run:
 python scraper/moving_csv.py
 ```
 This will:
-
-   Create the raw_data/ folder (if it doesn’t exist)
-   
-   Move all CSV files starting with coffee_ into it
+   - Create the raw_data/ folder (if it doesn’t exist)
+   - Move all CSV files starting with coffee_ into it
    
 Now your directory looks like:
 
-scraped_dataset/scraper/raw_data/
+   scraped_dataset/scraper/raw_data/
 
 ## 🧠 Merging Into a Combined Dataset
 Run the table-processing script:
@@ -95,16 +88,13 @@ Run the table-processing script:
 python scraper/process_tables_f.py
 ```
 This will:
-
-   Read all raw coffee CSV tables from raw_data/
-   
-   Merge them by coffee ID into one complete record
-   
-   Skip incomplete or malformed entries
+   - Read all raw coffee CSV tables from raw_data/
+   - Merge them by coffee ID into one complete record
+   - Skip incomplete or malformed entries
    
 Resulting file:
 
-scraped_dataset/scraper/df_1_arabica.csv
+   scraped_dataset/scraper/df_1_arabica.csv
 
 This is a combined dataset ready for cleaning and analysis.
 
@@ -112,13 +102,10 @@ This is a combined dataset ready for cleaning and analysis.
 
 Dataset contains ~229 coffee entries
 
-Each entry has ~40 features
-
-Reflects the current contents of the CQI database
-
-Matches the number of records visible manually on the site
-
-Larger datasets found online (1300+) are historical exports, not current site data.
+- Each entry has ~40 features
+- Reflects the current contents of the CQI database
+- Matches the number of records visible manually on the site
+- Larger datasets found online (1300+) are historical exports, not current site data.
 
 ## ⚠ Important Notes
 
