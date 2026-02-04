@@ -98,12 +98,3 @@ Credentials are required for scraping but should be stored securely (e.g., using
 🧾 Attribution
 Data was scraped from the official Coffee Quality Institute database:
 https://database.coffeeinstitute.org
-
-
----
-
-## 📌 Where to Add It
-
-👉 Create this file at:
-
-scraped_dataset/README.md
